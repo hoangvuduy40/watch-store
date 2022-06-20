@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.wapper {
+    padding-top: 30%;
+    width: var(--width-web);
+    height: auto;
+    background: url('http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/slide-bg-1.jpg')
+        top center/cover no-repeat;
+    position: relative;
+}
+.slider-box {
+    width: 550px;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    font-size: 1.9rem;
+    color: #fff;
+    button {
+        width: 200px;
+        height: 50px;
+        margin-top: 30px;
+        font-size: 1.8rem;
+        font-weight: 300;
+        background-color: #222;
+        color: #fff;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        &:hover {
+            background-color: #c89979;
+            border: solid 2px #c89979;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    }
+}

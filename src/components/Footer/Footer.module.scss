@@ -1,0 +1,52 @@
+.wapper {
+    background-color: #353535;
+    color: #fff;
+
+    .container {
+        border-bottom: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+    }
+}
+.section-content {
+    display: flex;
+    padding: 20px;
+    width: var(--width-web);
+}
+.content {
+    padding-top: 20px;
+    flex: 1;
+    .content-item {
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            p {
+                padding-left: 8px;
+            }
+        }
+    }
+    .content-title {
+        padding-bottom: 20px;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    li {
+        padding-bottom: 25px;
+    }
+    li:hover {
+        cursor: pointer;
+        color: var(--primary);
+    }
+}
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 60px;
+    .text {
+        width: var(--width-web);
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,128 @@
+.page {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.page-container {
+    width: var(--width-web);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        width: 585px;
+        height: 421px;
+    }
+    .text {
+        width: 585px;
+        height: 250px;
+        h1 {
+            padding-bottom: 20px;
+        }
+    }
+}
+// content
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+.container-content {
+    width: var(--width-web);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .content-item {
+        width: 400px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .item-text {
+            width: 320px;
+            height: 120px;
+        }
+        .item-icon {
+            width: 60px;
+            height: 120px;
+            font-size: 5rem;
+            padding-right: 5px;
+            color: #222;
+        }
+    }
+}
+
+.Inwatch {
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.watch {
+    width: 100%;
+    height: 100%;
+    .watch-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        opacity: 1;
+        img {
+            width: 100%;
+            height: 800px;
+            position: absolute;
+            object-fit: cover;
+        }
+        .bg-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+.watch-container {
+    width: var(--width-web);
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    .watch-text {
+        text-align: center;
+        font-size: 2rem;
+        color: rgb(255, 255, 255);
+        h2 {
+            font-weight: 900;
+        }
+        p {
+            font-weight: 500;
+        }
+    }
+}
+.author {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .container-author {
+        width: var(--width-web);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.item-author {
+    width: 370px;
+    p {
+        font-size: 1.5rem;
+        font-style: italic;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}

@@ -1,0 +1,256 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner-min {
+    width: var(--width-web);
+    height: 390px;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.banner-minone {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/trend-1.jpg')
+        no-repeat;
+    background-size: 585px 300px;
+    background-position: center;
+    transition: all 0.5s ease;
+    color: #fff;
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+.banner-mintwo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/trend-2.jpg')
+        no-repeat;
+    background-size: 585px 300px;
+    background-position: center;
+    transition: all 0.5s ease;
+    color: #fff;
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+.text {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    div {
+        background-color: var(--primary);
+        height: 2px;
+        width: 60px;
+    }
+    h3 {
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+}
+// sản phẩm bán chạy
+.product-sale {
+    width: var(--width-web);
+    height: 650px;
+    overflow: hidden;
+}
+.pro-list {
+    width: 200%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    transition: all 2s ease;
+}
+.pro-title {
+    width: var(--width-web);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    .btn button {
+        font-size: 4rem;
+        background-color: #fff;
+        padding-left: 20px;
+        &:hover {
+            color: var(--primary);
+        }
+    }
+}
+.product-item {
+    width: 280px;
+    height: 500px;
+    border: 1px solid #ddd;
+    text-align: center;
+    position: relative;
+    &:hover {
+        .icon-heart {
+            display: block;
+            transition: all 2s ease;
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+}
+.pro-img {
+    border-bottom: 1px solid #ddd;
+    img {
+        width: 278px;
+        height: 320px;
+    }
+}
+.icon-sale {
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    font-size: 6rem;
+    color: var(--primary);
+    span {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 500;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+    }
+}
+.icon-heart {
+    padding-bottom: 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 4rem;
+    display: none;
+}
+.pro-name {
+    padding-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.pro-price {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--primary);
+    display: flex;
+    font-weight: 500;
+    justify-content: space-evenly;
+    p:first-child {
+        text-decoration: line-through;
+        opacity: 70%;
+    }
+}
+.btn-cart {
+    width: 120px;
+    height: 30px;
+    color: #fff;
+    background-color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    &:hover {
+        opacity: 1;
+        box-shadow: inset 0 0 0 100px rgb(0 0 0 / 20%);
+    }
+}
+//banner cổ điển
+.banner-min3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/banner-03.jpg')
+        no-repeat;
+    background-size: 585px 300px;
+    background-position: center;
+    transition: all 0.5s ease;
+    color: #fff;
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+.text-banner3 {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 260px;
+}
+.text-banner4 {
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    width: 260px;
+}
+.banner-min4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/banner-04.jpg')
+        no-repeat;
+    background-size: 585px 300px;
+    background-position: center;
+    transition: all 0.5s ease;
+    color: #fff;
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+.cate {
+    display: flex;
+    padding: 10px;
+    h2 {
+        padding-left: 20px;
+        &:hover {
+            cursor: pointer;
+            color: var(--primary);
+        }
+    }
+}
+.cate-list {
+    width: var(--width-web);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pro-item {
+    width: 220px;
+    height: 420px;
+    border: 1px solid #ddd;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    .img {
+        border-bottom: 1px solid #ddd;
+        img {
+            width: 216px;
+            height: 252px;
+        }
+    }
+    &:hover {
+        .icon-heart {
+            display: block;
+            transition: all 2s ease;
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+}
+.home-blog {
+    margin-top: 200px;
+    width: var(--width-web);
+    display: flex;
+    justify-content: space-around;
+}
+.blog-item {
+    font-size: 1.3rem;
+    width: 380px;
+    height: 380px;
+    img {
+        width: 380px;
+        height: 210px;
+    }
+}
