@@ -18,11 +18,12 @@ import Search from '../Search';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteQuantityCart } from '../../actions/action';
+import { deleteQuantityCart, setLogger } from '../../actions/action';
 
 const cx = classNames.bind(styles);
 function Header() {
     const listCart = useSelector((state) => state.cart.list);
+    const logger = useSelector((state) => state.cart.logger);
     const NavBar = useRef();
     useEffect(() => {
         document.addEventListener('scroll', () => {
@@ -55,6 +56,14 @@ function Header() {
                 TotalCart += listCart[i].price * listCart[i].quantity;
             }
             setTotal(TotalCart);
+        }
+        if (logger == true) {
+            CartRef.current.style.display = 'block';
+            setTimeout(() => {
+                CartRef.current.style.display = '';
+                const action = setLogger();
+                dispatch(action);
+            }, 5000);
         }
     }, [listCart]);
 

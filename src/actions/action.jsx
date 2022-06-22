@@ -27,3 +27,14 @@ export const deleteCart = () => {
         type: 'DELETE_CART',
     };
 };
+export const setLogger = () => {
+    return {
+        type: 'SET_LOGGER',
+    };
+};
+export const addCartDetail = (product) => {
+    return {
+        type: 'ADD_CART_DETAIL',
+        payload: product,
+    };
+};

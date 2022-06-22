@@ -12,7 +12,11 @@ const CartReducers = (state = initialState, action) => {
             if (!productInCart) {
                 const newCart = [...state.list];
                 newCart.push(action.payload);
-                return { ...state, list: newCart };
+                const objIndex = newCart.findIndex(
+                    (obj) => obj.id == action.payload.id,
+                );
+                newCart[objIndex].quantity = 1;
+                return { ...state, list: newCart, logger: true };
             } else {
                 const newCart = state.list;
                 const objIndex = newCart.findIndex(
@@ -24,7 +28,7 @@ const CartReducers = (state = initialState, action) => {
                 } else {
                     newCart[objIndex].quantity = newCart[objIndex].quantity + 1;
                 }
-                return { ...state, list: [...newCart] };
+                return { ...state, list: [...newCart], logger: true };
             }
         }
         case 'DELETE_QUANTITY_CART': {
@@ -60,6 +64,26 @@ const CartReducers = (state = initialState, action) => {
         }
         case 'DELETE_CART': {
             return { ...state, list: [] };
+        }
+        case 'SET_LOGGER': {
+            return { ...state, logger: false };
+        }
+        case 'ADD_CART_DETAIL': {
+            const productInCart = state.list.find(
+                (p) => p.id == action.payload.id,
+            );
+            if (!productInCart) {
+                const newCart = [...state.list];
+                newCart.push(action.payload);
+                return { ...state, list: newCart, logger: true };
+            } else {
+                const newCart = [...state.list];
+                const objIndex = newCart.findIndex(
+                    (obj) => obj.id == action.payload.id,
+                );
+                newCart[objIndex].quantity = action.payload.quantity;
+                return { ...state, list: [...newCart], logger: true };
+            }
         }
         default:
             return state;

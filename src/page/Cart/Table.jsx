@@ -50,18 +50,17 @@ function Table({ product }) {
                 </td>
                 <td className={cx('name')}>{product.name}</td>
                 <td className={cx('price')}>{product.price}&nbsp;USD</td>
-                <td className={cx('quantities')}>
+                <td
+                    className={cx('quantities')}
+                    style={{ display: 'flex', alignItems: 'center' }}
+                >
                     <button
                         className={cx('down')}
                         onClick={() => handleDown(product)}
                     >
                         -
                     </button>
-                    <input
-                        className={cx('quantity')}
-                        type="text"
-                        defaultValue={product.quantity}
-                    />
+                    <p className={cx('quantity')}>{product.quantity}</p>
                     <button
                         className={cx('up')}
                         onClick={() => handleUp(product)}
