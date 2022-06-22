@@ -1,11 +1,10 @@
 import Style from '../DetailProduct.module.scss';
 import classNames from 'classnames/bind';
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCartDetail } from '../../../actions/action';
-import { data } from 'autoprefixer';
 
 const cx = classNames.bind(Style);
 function Detail({ product }) {
@@ -74,7 +73,7 @@ function Detail({ product }) {
     const listCart = useSelector((state) => state.cart.list);
 
     const handleAddCart = (pro) => {
-        const data = listCart.filter((data) => data.id == pro.id);
+        const data = listCart.filter((data) => data.id === pro.id);
         if (isNaN(data)) {
             const q = +data.map((data) => {
                 return data.quantity;

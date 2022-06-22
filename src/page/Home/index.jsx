@@ -51,7 +51,10 @@ function Home() {
                 <Cate />
                 <div className={cx('home-blog')}>
                     <div className={cx('blog-item')}>
-                        <img src="http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/new-4.jpg" />
+                        <img
+                            alt=""
+                            src="http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/new-4.jpg"
+                        />
                         <h2>
                             Chiếc đồng hồ của những CEO quyền lực nhất thế giới
                         </h2>
@@ -61,7 +64,10 @@ function Home() {
                         </p>
                     </div>
                     <div className={cx('blog-item')}>
-                        <img src="http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/trend-2.jpg" />
+                        <img
+                            alt=""
+                            src="http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/trend-2.jpg"
+                        />
                         <h2>
                             Chiếc đồng hồ của những CEO quyền lực nhất thế giới
                         </h2>
@@ -71,7 +77,10 @@ function Home() {
                         </p>
                     </div>
                     <div className={cx('blog-item')}>
-                        <img src="http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/new-3.jpg" />
+                        <img
+                            alt=""
+                            src="http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/new-3.jpg"
+                        />
                         <h2>
                             Chiếc đồng hồ của những CEO quyền lực nhất thế giới
                         </h2>

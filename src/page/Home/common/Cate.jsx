@@ -1,7 +1,6 @@
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Style from '../Home.module.scss';
 import classNames from 'classnames/bind';
-import ProImg from '../../../assets/images/product-05.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { getAllPro } from '../../../services/requestApi';

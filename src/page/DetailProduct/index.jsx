@@ -46,7 +46,7 @@ function DetailProduct() {
                                     ></FontAwesomeIcon>
                                 </div>
                                 <div className={cx('pro-img')}>
-                                    <img src={pro.image} />
+                                    <img src={pro.image} alt="" />
                                 </div>
                                 <div className={cx('pro-name')}>{pro.name}</div>
                                 <div className={cx('pro-price')}>
