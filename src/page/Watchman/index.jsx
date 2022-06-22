@@ -58,17 +58,17 @@ function Watchman() {
                                     key={pro.id}
                                     className={cx('product-item')}
                                 >
-                                    <div className={cx('pro-img')}>
-                                        <img src={pro.image} alt="" />
-                                    </div>
-                                    <div className={cx('pro-name')}>
-                                        <Link to={`/product/${pro.id}`}>
+                                    <Link to={`/product/${pro.id}`}>
+                                        <div className={cx('pro-img')}>
+                                            <img src={pro.image} alt="" />
+                                        </div>
+                                        <div className={cx('pro-name')}>
                                             {pro.name}
-                                        </Link>
-                                    </div>
-                                    <div className={cx('pro-price')}>
-                                        <p>{pro.price}&nbsp;USD</p>
-                                    </div>
+                                        </div>
+                                        <div className={cx('pro-price')}>
+                                            <p>{pro.price}&nbsp;USD</p>
+                                        </div>
+                                    </Link>
                                     <button
                                         onClick={(e) => handleAddCart(pro)}
                                         className={cx('btn-cart')}

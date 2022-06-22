@@ -2,6 +2,7 @@ import Styles from './Sidebar.module.scss';
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import { getAllBlog, getAllPro } from '../../services/requestApi';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(Styles);
 function Sidebar() {
@@ -35,13 +36,17 @@ function Sidebar() {
                     <div className={cx('pro-list')}>
                         {product.map((pro) => {
                             return (
-                                <div key={pro.id} className={cx('pro-item')}>
+                                <Link
+                                    to={`/product/${pro.id}`}
+                                    className={cx('pro-item')}
+                                    key={pro.id}
+                                >
                                     <img src={pro.image} alt="" />
                                     <div className={cx('text')}>
                                         <h3>{pro.name}</h3>
                                         <p>{pro.price} &nbsp;USD</p>
                                     </div>
-                                </div>
+                                </Link>
                             );
                         })}
                     </div>

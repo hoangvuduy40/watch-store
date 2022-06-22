@@ -55,17 +55,17 @@ function Watchman() {
                         {dataWomen.map((pro) => {
                             return (
                                 <div key={pro.id} className={cx('item')}>
-                                    <div className={cx('pro-img')}>
-                                        <img src={pro.image} />
-                                    </div>
-                                    <div className={cx('pro-name')}>
-                                        <Link to={`/product/${pro.id}`}>
+                                    <Link to={`/product/${pro.id}`}>
+                                        <div className={cx('pro-img')}>
+                                            <img src={pro.image} />
+                                        </div>
+                                        <div className={cx('pro-name')}>
                                             {pro.name}
-                                        </Link>
-                                    </div>
-                                    <div className={cx('pro-price')}>
-                                        <p>{pro.price}&nbsp;USD</p>
-                                    </div>
+                                        </div>
+                                        <div className={cx('pro-price')}>
+                                            <p>{pro.price}&nbsp;USD</p>
+                                        </div>
+                                    </Link>
                                     <button
                                         onClick={(e) => handleAddCart(pro)}
                                         className={cx('btn-cart')}

@@ -32,7 +32,7 @@ function Header() {
                 NavBar.current.style.top = '0';
                 NavBar.current.style.left = '0';
             } else {
-                NavBar.current.style.position = 'unset';
+                NavBar.current.style.position = '';
             }
         });
         return () => {
@@ -130,16 +130,33 @@ function Header() {
                                                 key={index}
                                                 className={cx('cart-item')}
                                             >
-                                                <img src={`${product.image}`} />
+                                                <Link
+                                                    to={`/product/${product.id}`}
+                                                >
+                                                    <img
+                                                        src={`${product.image}`}
+                                                        alt=""
+                                                    />
+                                                </Link>
                                                 <div className={cx('text')}>
-                                                    <p className={cx('name')}>
-                                                        {product.name}
-                                                    </p>
+                                                    <Link
+                                                        to={`/product/${product.id}`}
+                                                    >
+                                                        <p
+                                                            className={cx(
+                                                                'name',
+                                                            )}
+                                                        >
+                                                            {product.name}
+                                                        </p>
+                                                    </Link>
                                                     <p>
-                                                        {product.price}&nbsp;USD
-                                                        x{product.quantity}
+                                                        {product.price}
+                                                        &nbsp;USD x
+                                                        {product.quantity}
                                                     </p>
                                                 </div>
+
                                                 <button
                                                     style={{
                                                         fontSize: '2rem',
@@ -176,7 +193,7 @@ function Header() {
                                     </div>
                                 </div>
                             ) : (
-                                <div className={cx('cart')}>
+                                <div ref={CartRef} className={cx('cart')}>
                                     <h3>
                                         Bạn chưa có sản phẩm nào trong giỏ hàng!
                                     </h3>

@@ -43,7 +43,7 @@ const CartReducers = (state = initialState, action) => {
             } else {
                 newCart.splice(objIndex, 1);
             }
-            return { ...state, list: [...newCart] };
+            return { ...state, list: [...newCart], logger: false };
         }
         case 'UPDATE_CART': {
             const newCart = state.list;

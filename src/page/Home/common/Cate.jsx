@@ -6,6 +6,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { getAllPro } from '../../../services/requestApi';
 import { useDispatch } from 'react-redux';
 import { actAddCart } from '../../../actions/action';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(Style);
 
@@ -85,15 +86,17 @@ function Cate() {
                                         icon={faHeart}
                                     ></FontAwesomeIcon>
                                 </div>
-                                <div className={cx('img')}>
-                                    <img src={product.image} alt="" />
-                                </div>
-                                <div className={cx('pro-name')}>
-                                    {product.name}
-                                </div>
-                                <div className={cx('pro-price')}>
-                                    <p>{product.price} &nbsp;USD</p>
-                                </div>
+                                <Link to={`/product/${product.id}`}>
+                                    <div className={cx('img')}>
+                                        <img src={product.image} alt="" />
+                                    </div>
+                                    <div className={cx('pro-name')}>
+                                        {product.name}
+                                    </div>
+                                    <div className={cx('pro-price')}>
+                                        <p>{product.price} &nbsp;USD</p>
+                                    </div>
+                                </Link>
                                 <button
                                     onClick={(e) => handleAddCart(product)}
                                     className={cx('btn-cart')}

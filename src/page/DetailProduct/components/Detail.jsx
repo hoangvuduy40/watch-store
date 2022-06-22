@@ -135,7 +135,9 @@ function Detail({ product }) {
                     <div className={cx('name-pro')}>
                         <h1> {product.name}</h1>
                     </div>
-                    <div className={cx('price-pro')}>{product.price}</div>
+                    <div className={cx('price-pro')}>
+                        {product.price}&nbsp;USD
+                    </div>
                     <div className={cx('contentPro')}>{product.content}</div>
                     <div className={cx('cate-pro')}>
                         <li>Sku: P006</li>
